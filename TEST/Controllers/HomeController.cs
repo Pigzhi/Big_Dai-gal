@@ -16,7 +16,7 @@ namespace TEST.Controllers
         public IActionResult Index()
         {
             int x = 22;
-            var y = "HELLO";
+            var y = "TEST DELETE";
             return View();
         }
 
