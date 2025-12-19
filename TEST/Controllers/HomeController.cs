@@ -15,7 +15,7 @@ namespace TEST.Controllers
 
         public IActionResult Index()
         {
-            int x = 22;
+         
             return View();
         }
 
@@ -24,10 +24,16 @@ namespace TEST.Controllers
             return View();
         }
 
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult management()
+        {
+            return View();
         }
     }
 }
