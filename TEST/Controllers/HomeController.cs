@@ -35,5 +35,9 @@ namespace TEST.Controllers
         {
             return View();
         }
+        public IActionResult homepage()
+        {
+            return View();
+        }
     }
 }

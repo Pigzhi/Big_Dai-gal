@@ -18,6 +18,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=homepage}/{id?}");
 //請用這個規則，去找對應的 Controller 和 Action -->設定首頁  
 app.Run();

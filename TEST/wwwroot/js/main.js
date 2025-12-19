@@ -95,24 +95,109 @@ let menu, animate;
   });
 
   // Auto update layout based on screen size
-  window.Helpers.setAutoUpdate(true);
+  //window.Helpers.setAutoUpdate(true); //報錯
 
   // Toggle Password Visibility
-  window.Helpers.initPasswordToggle();
+  //window.Helpers.initPasswordToggle();
 
   // Speech To Text
-  window.Helpers.initSpeechToText();
+  //window.Helpers.initSpeechToText();
 
   // Manage menu expanded/collapsed with templateCustomizer & local storage
   //------------------------------------------------------------------
 
-  // If current layout is horizontal OR current window screen is small (overlay menu) than return from here
-  if (window.Helpers.isSmallScreen()) {
-    return;
-  }
+    // If current layout is horizontal OR current window screen is small (overlay menu) than return from here
+
+  //if (window.Helpers.isSmallScreen()) {
+  //  return;
+  //}
 
   // If current layout is vertical and current window screen is > small
 
   // Auto update menu collapsed/expanded based on the themeConfig
-  window.Helpers.setCollapsed(true, false);
+  //window.Helpers.setCollapsed(true, false);
 })();
+
+
+//============================================================新增
+(function ($) {
+    "use strict";
+
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
+
+
+    // Initiate the wowjs
+    new WOW().init();
+
+
+    // Sticky Navbar
+    $(window).onscroll(function () {
+        if ($(this).scrollTop() > 45) {
+            $('.nav-bar').addClass('sticky-top');
+        } else {
+            $('.nav-bar').removeClass('sticky-top');
+        }
+    });
+    //這裡把scroll改成onscroll 有問題的話查看看
+
+    // Back to top button
+    $(window).onscroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').onclick(function () {
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+        return false;
+    });
+
+
+    // Header carousel
+    $(".header-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        items: 1,
+        dots: true,
+        loop: true,
+        nav: true,
+        navText: [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ]
+    });
+
+
+    // Testimonials carousel
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 24,
+        dots: false,
+        loop: true,
+        nav: true,
+        navText: [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            992: {
+                items: 2
+            }
+        }
+    });
+
+})(jQuery);
+
