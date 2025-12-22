@@ -1,0 +1,14 @@
+-- 1. 建立使用者表 
+CREATE TABLE Users ( uid NVARCHAR(50) PRIMARY KEY, name NVARCHAR(100) NOT NULL, email NVARCHAR(100) UNIQUE NOT NULL, password_hash NVARCHAR(255) NOT NULL, phone NVARCHAR(20), balance DECIMAL(15, 2) DEFAULT 0.00, 
+-- 錢包餘額 
+escrow_balance DECIMAL(15, 2) DEFAULT 0.00, 
+-- 暫存錢包 
+created_at DATETIME DEFAULT GETDATE() ); 
+-- 2. 建立委託/商品表 -- 注意：SQL Server 沒有 ENUM，我們使用 CHECK 約束來達成同樣效果 
+CREATE TABLE Products ( product_id INT IDENTITY(1,1) PRIMARY KEY, 
+-- 改用 IDENTITY(1,1) 
+creator_id NVARCHAR(50), product_type NVARCHAR(20) CHECK (product_type IN ('commission', 'market')), title NVARCHAR(255) NOT NULL, image_url NVARCHAR(MAX), description NVARCHAR(MAX), price DECIMAL(15, 2) NOT NULL, quantity INT DEFAULT 1, category NVARCHAR(50), location NVARCHAR(255), shipping_address NVARCHAR(MAX), deadline DATETIME, created_at DATETIME DEFAULT GETDATE(), CONSTRAINT FK_Product_Creator FOREIGN KEY (creator_id) REFERENCES Users(uid) ); 
+-- 3. 建立訂單主表 
+CREATE TABLE Orders ( order_id INT IDENTITY(1,1) PRIMARY KEY, product_id INT, buyer_id NVARCHAR(50), seller_id NVARCHAR(50), order_status NVARCHAR(20) DEFAULT 'pending' CHECK (order_status IN ('pending', 'active', 'completed', 'cancelled')), total_amount DECIMAL(15, 2), system_fee DECIMAL(15, 2), shipping_address NVARCHAR(MAX), accepted_at DATETIME DEFAULT GETDATE(), CONSTRAINT FK_Order_Buyer FOREIGN KEY (buyer_id) REFERENCES Users(uid), CONSTRAINT FK_Order_Seller FOREIGN KEY (seller_id) REFERENCES Users(uid), CONSTRAINT FK_Order_Product FOREIGN KEY (product_id) REFERENCES Products(product_id) );
+-- 4. 建立對話紀錄表 
+CREATE TABLE Chat_Messages ( message_id INT IDENTITY(1,1) PRIMARY KEY, order_id INT, sender_id NVARCHAR(50), message_text NVARCHAR(MAX), sent_at DATETIME DEFAULT GETDATE(), CONSTRAINT FK_Chat_Order FOREIGN KEY (order_id) REFERENCES Orders(order_id), CONSTRAINT FK_Chat_Sender FOREIGN KEY (sender_id) REFERENCES Users(uid) );
