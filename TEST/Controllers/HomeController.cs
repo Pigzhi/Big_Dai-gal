@@ -15,8 +15,9 @@ namespace TEST.Controllers
 
         public IActionResult Index()
         {
-         
-            return View();
+            int x = 5;
+            return Content("Good");
+            //return View();
         }
 
         public IActionResult Privacy()
