@@ -15,7 +15,7 @@ namespace TEST.Controllers
 
         public IActionResult Index()
         {
-         
+            int x = 5;
             return Content("Good");
             //return View();
         }
