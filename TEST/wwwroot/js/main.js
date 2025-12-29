@@ -138,28 +138,31 @@ let menu, animate;
     new WOW().init();
 
 
-    // Sticky Navbar
-    $(window).onscroll(function () {
-        if ($(this).scrollTop() > 45) {
-            $('.nav-bar').addClass('sticky-top');
-        } else {
-            $('.nav-bar').removeClass('sticky-top');
-        }
-    });
+    // Sticky Navbar                                    12/29 html取消 這邊註解了
+
+    //$(window).onscroll(function () {
+    //    if ($(this).scrollTop() > 45) {
+    //        $('.nav-bar').addClass('sticky-top');
+    //    } else {
+    //        $('.nav-bar').removeClass('sticky-top');
+    //    }
+    //});
+
     //這裡把scroll改成onscroll 有問題的話查看看
 
-    // Back to top button
-    $(window).onscroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').onclick(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
-        return false;
-    });
+    // Back to top button                                   12/29 html取消 這邊註解了
+
+    //$(window).onscroll(function () {
+    //    if ($(this).scrollTop() > 300) {
+    //        $('.back-to-top').fadeIn('slow');
+    //    } else {
+    //        $('.back-to-top').fadeOut('slow');
+    //    }
+    //});
+    //$('.back-to-top').onclick(function () {
+    //    $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+    //    return false;
+    //});
 
 
     // Header carousel
