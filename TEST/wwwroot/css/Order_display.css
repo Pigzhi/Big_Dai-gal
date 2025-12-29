@@ -1,0 +1,99 @@
+/* ===== 基本設定 ===== */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system;
+  background: #f4f4f4;
+}
+
+/* ===== 訂單列表 ===== */
+
+.order-item {
+    cursor: pointer;
+}
+
+/* ===== 遮罩 ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Modal ===== */
+.order-modal {
+    width: 80vw;
+    height: 80vh;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: scale(.85);
+    opacity: 0;
+    transition: .25s ease;
+
+
+}
+
+@media (max-width: 768px) {
+    .order-modal {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+.overlay.show .order-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ===== Modal Header ===== */
+.modal-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===== Modal Content ===== */
+.modal-content {
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.info p {
+  margin: 6px 0;
+  font-size: 15px;
+}

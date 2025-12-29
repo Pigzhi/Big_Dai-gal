@@ -1,7 +1,16 @@
+
+using Proxy_shopping.service;
+using Microsoft.EntityFrameworkCore;
+using Proxy_shopping.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+var connectionString = builder.Configuration.GetConnectionString("linkToProxy");
+builder.Services.AddDbContext<ProxyContext>(x => x.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 var app = builder.Build();
 
