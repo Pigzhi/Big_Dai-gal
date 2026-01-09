@@ -29,12 +29,12 @@ namespace API.Controllers
                     success = false,
                     errors = ModelState
                      .Where(x => x.Value.Errors.Count > 0)
-                     .ToDictionary(k => k.Key, //欄位名稱
-                     v => v.Value.Errors.Select(e => e.ErrorMessage).ToArray() //value就是該欄位的狀態（包含 Errors）
+                     .ToDictionary(k => k.Key, 
+                     v => v.Value.Errors.Select(e => e.ErrorMessage).ToArray() 
                      )
                 });
             }
-            // 取得目前登入id
+            
             var userid = "101";
             //var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; // 如果是 JWT / Session用這個
             var user = await _proxyContext.Users
@@ -47,7 +47,7 @@ namespace API.Controllers
             }
             //手續費 跟 總價 四捨五入
             decimal fee = 0.1m;
-            decimal Pricefee = (dto.Price* dto.Quantity) * fee; //平台手續費
+            decimal Pricefee = (dto.Price* dto.Quantity) * fee; 
             decimal TotalPrice = Math.Round((dto.Price * dto.Quantity) + Pricefee,
                                                     0, MidpointRounding.AwayFromZero);
 
@@ -92,7 +92,7 @@ namespace API.Controllers
                     Category = dto.Category,
                     Location = dto.Location,
                     EscrowAmount = TotalPrice, //Commission 委託 扣住金額
-                    Deadline = dto.Deadline.AddDays(7), //結束日期自動加7天 還要審核
+                    Deadline = dto.Deadline.AddDays(7), 
 
                     Status = "審核中",                                  // 預設
                     CreatedAt = DateTime.Now,              // 後端補
@@ -129,7 +129,7 @@ namespace API.Controllers
                 _proxyContext.CommissionHistories.Add(history);
                 await _proxyContext.SaveChangesAsync();
 
-                if (dto.Image != null && FilePath != null)  //DB 存檔後才上傳圖片， 不燃失敗圖片也依直傳..
+                if (dto.Image != null && FilePath != null)  
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(FilePath)!);
 
@@ -138,7 +138,7 @@ namespace API.Controllers
                 }
 
                 await transaction.CommitAsync();
-                //回傳的資料
+               
                 var response = new CommissionDataDto
                 {
                     Title = Commission.Title,

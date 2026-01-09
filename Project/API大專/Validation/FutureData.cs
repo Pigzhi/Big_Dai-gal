@@ -11,7 +11,7 @@ public class FutureDateAttribute : ValidationAttribute
 
         if (value is DateTime dateTime)
         {
-            // 只比日期，不比時間（避免今天但時間早被擋）
+           
             return dateTime.Date > DateTime.Today;
         }
 
