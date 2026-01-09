@@ -19,13 +19,13 @@ namespace API大專.Controllers
             _proxyContext = proxyContext;
         }
 
-        //委託 展示
+        //委託 展示用
         [HttpGet]
         public async Task<IActionResult> GetCommissionsList() 
         { 
             var commissions = await _proxyContext.Commissions
                                                 .Where(u=>u.Status == "待接單")
-                                                .OrderByDescending(u=>u.UpdatedAt) //由大到小時間抓
+                                                .OrderByDescending(u=>u.UpdatedAt) 
                                                 .Select(u=> new 
                                                 { 
                                                 u.CommissionId,
@@ -53,20 +53,20 @@ namespace API大專.Controllers
             var Commission = await _proxyContext.Commissions
                                                .Where(c => c.CommissionId == id && c.Status == "待接單")
                                                .Select(c => new
-                                               {    //比普通清單多
+                                               {    
                                                    c.CommissionId,
                                                    c.Title,
-                                                   c.Description, //描述
+                                                   c.Description, 
                                                    c.Price, 
                                                    c.Quantity,
-                                                   c.Fee,                //平台手續費
-                                                   c.EscrowAmount, // 會拿到的總價格
+                                                   c.Fee,            
+                                                   c.EscrowAmount, 
                                                    c.Category,
                                                    c.Location,
                                                    c.ImageUrl,
-                                                   c.CreatedAt, //這委託建立的時間
+                                                   c.CreatedAt, 
                                                    c.Deadline,
-                                                   c.Status        //顯示用
+                                                   c.Status       
                                                }).FirstOrDefaultAsync();
             if (Commission==null) {
                 return NotFound(

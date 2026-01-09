@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xOjo3H04mG4=",
+  "dgSpecHash": "0qP3KORZtVE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pig\\Desktop\\Project\\MVC大專\\MVC大專.csproj",
+  "projectFilePath": "C:\\Users\\Pig\\Desktop\\大專檔案\\Project\\MVC大專\\MVC大專.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pig\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Pig\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
