@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVC大專")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eada2938364ae377f6c198df5a1c062a1c9fd181")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC大專")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC大專")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -24,7 +24,7 @@ namespace API大專.service
             try
             {
                 var Commission = await _ProxyContext.Commissions
-                                        .FirstOrDefaultAsync(p => p.CommissionId == commissionId && p.CreatorId == userId); //驗證是不是訂單的建單人，跟委託是不是跟資料庫的是同一筆
+                                        .FirstOrDefaultAsync(p => p.CommissionId == commissionId && p.CreatorId == userId); 
                 if (Commission == null)
                 {
                     return (false, "找不到此委託");
@@ -42,12 +42,12 @@ namespace API大專.service
 
 
 
-                //判斷 修改內容 給歷史diff使用
+               
 
                 var oldDiff = new Dictionary<string, object>();
                 var newDiff = new Dictionary<string, object>();
 
-                //如果原本的委託的xx 不等於 Editdto送來的的xx 代表有更動
+                
                 if (Commission.Title != dto.Title)
                 {
                     oldDiff["Title"] = Commission.Title;
@@ -59,9 +59,9 @@ namespace API大專.service
                     newDiff["Description"] = dto.Description;
                 }
                 if (Commission.Price != dto.Price)
-                {//有更改才進來
-                    oldDiff["Price"] = Commission.Price; //old設定成Com資料 舊的 
-                    newDiff["Price"] = dto.Price;// new設定 dto新進來的資料
+                {
+                    oldDiff["Price"] = Commission.Price; 
+                    newDiff["Price"] = dto.Price;
                 }
                 if (Commission.Quantity != dto.Quantity)
                 {
@@ -86,18 +86,18 @@ namespace API大專.service
 
                 var oldEscrow = Commission.EscrowAmount;
 
-                //金額被修改 ->重算
+                
                 decimal feeRate = 0.1m;
-                decimal newfee = (dto.Price * dto.Quantity) * feeRate; //新的手續費用
+                decimal newfee = (dto.Price * dto.Quantity) * feeRate; 
                 decimal newtotal = Math.Round((dto.Price * dto.Quantity) + newfee
                                                     , 0, MidpointRounding.AwayFromZero);
 
-                var diff = newtotal - oldEscrow; //金額差異
+                var diff = newtotal - oldEscrow; 
                 if (diff > 0 && user.Balance < diff)
                 {
                     return (false, "錢包餘額不足，金額變更失敗");
                 }
-                user.Balance -= diff;   //diff是多的就是 錢包-diff ， 改便宜 diff變-的 就是 錢包-(-diff);
+                user.Balance -= diff;  
 
                 Commission.Title = dto.Title;
                 Commission.Description = dto.Description;
@@ -108,38 +108,38 @@ namespace API大專.service
                 if (Commission.Deadline != dto.Deadline)
                 {
                     Commission.Deadline = dto.Deadline.AddDays(7);
-                } //在新的時間基礎上再往後加 7 天
+                } 
                 Commission.Fee = newfee;
                 Commission.EscrowAmount = newtotal;
 
-                Commission.Status = "審核中"; //編輯過都要重新審核
+                Commission.Status = "審核中"; 
 
                 //圖片處理
                 if (dto.Image != null && dto.Image.Length > 0)
                 {
-                    var uploadPath = Path.Combine("wwwroot", "uploads");  // Path.Combine會依照 linux使用/或windows使用\
-                    Directory.CreateDirectory(uploadPath);                                 //自動判斷有無資料夾 沒有就建
+                    var uploadPath = Path.Combine("wwwroot", "uploads");  
+                    Directory.CreateDirectory(uploadPath);                                 
 
                     if (!string.IsNullOrEmpty(Commission.ImageUrl))
                     {
-                        var oldImagePath = Path.Combine("wwwroot", Commission.ImageUrl.TrimStart('/')); //改成 wwwroot/uploads/xxx.jpg , 檔案系統不吃/開頭
-                        if (File.Exists(oldImagePath)) //保護
+                        var oldImagePath = Path.Combine("wwwroot", Commission.ImageUrl.TrimStart('/')); 
+                        if (File.Exists(oldImagePath)) 
                         {
                             File.Delete(oldImagePath);
                         }
                     }
-                    //        Guid.NewGuid 產生不會重複的名字    path.GetExtension 會拿副檔名 （.jpg、.png）
+                   
                     var fileName = $"{Guid.NewGuid()}{Path.GetExtension(dto.Image.FileName)}"; 
-                    var filePath = Path.Combine(uploadPath, fileName);//實際上拿到後長這樣 wwwroot/uploads/3f7c9d3a-9f5c-4c7e-9b9a-21f4c3c1a8e2.png
-                                                                      // FileMode.Create 沒檔案 → 建立；有檔案 → 覆蓋
-                    using var stream = new FileStream(filePath, FileMode.Create); //new FileStream 在硬碟建立一個檔案 (filePath在這位置建立, )
-                    await dto.Image.CopyToAsync(stream); //把 IFormFile 裡的資料，一口氣倒進剛剛開的水管
+                    var filePath = Path.Combine(uploadPath, fileName);
+                                                                     
+                    using var stream = new FileStream(filePath, FileMode.Create); 
+                    await dto.Image.CopyToAsync(stream); 
 
                     Commission.ImageUrl = $"/uploads/{fileName}";
                 }
 
 
-                //前面有 尋找 差異Diff  最後判斷哪邊有改 存進歷史
+               
                 var jsonOptions = new JsonSerializerOptions
                 {
                     Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
