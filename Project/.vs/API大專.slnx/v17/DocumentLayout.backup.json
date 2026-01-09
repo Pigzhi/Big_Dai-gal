@@ -1,0 +1,204 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\mvc\u5927\u5C08\\views\\home\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|solutionrelative:mvc\u5927\u5C08\\views\\home\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\mvc\u5927\u5C08\\views\\home\\management.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|solutionrelative:mvc\u5927\u5C08\\views\\home\\management.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\mvc\u5927\u5C08\\views\\shared\\management.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|solutionrelative:mvc\u5927\u5C08\\views\\shared\\management.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\api\u5927\u5C08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|solutionrelative:api\u5927\u5C08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\mvc\u5927\u5C08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|solutionrelative:mvc\u5927\u5C08\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\api\u5927\u5C08\\controllers\\historycommissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|solutionrelative:api\u5927\u5C08\\controllers\\historycommissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\mvc\u5927\u5C08\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABC1D04-F269-42FC-8545-A7A7902D1FD3}|MVC\u5927\u5C08\\MVC\u5927\u5C08.csproj|solutionrelative:mvc\u5927\u5C08\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\api\u5927\u5C08\\controllers\\completedcommission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|solutionrelative:api\u5927\u5C08\\controllers\\completedcommission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\api\u5927\u5C08\\controllers\\createcommissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|solutionrelative:api\u5927\u5C08\\controllers\\createcommissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\api\u5927\u5C08\\service\\commissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|solutionrelative:api\u5927\u5C08\\service\\commissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|c:\\users\\user\\desktop\\project\\api\u5927\u5C08\\controllers\\commissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{121CFE86-B24E-622B-8A12-50B3C69F9701}|API\u5927\u5C08\\API\u5927\u5C08.csproj|solutionrelative:api\u5927\u5C08\\controllers\\commissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Program.cs",
+              "RelativeDocumentMoniker": "API\u5927\u5C08\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Program.cs",
+              "RelativeToolTip": "API\u5927\u5C08\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:28:32.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Program.cs",
+              "RelativeDocumentMoniker": "MVC\u5927\u5C08\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Program.cs",
+              "RelativeToolTip": "MVC\u5927\u5C08\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:24:41.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Views\\Home\\History.cshtml",
+              "RelativeDocumentMoniker": "MVC\u5927\u5C08\\Views\\Home\\History.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Views\\Home\\History.cshtml",
+              "RelativeToolTip": "MVC\u5927\u5C08\\Views\\Home\\History.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwCkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-09T07:08:15.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "management.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Views\\Shared\\management.cshtml",
+              "RelativeDocumentMoniker": "MVC\u5927\u5C08\\Views\\Shared\\management.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Views\\Shared\\management.cshtml",
+              "RelativeToolTip": "MVC\u5927\u5C08\\Views\\Shared\\management.cshtml",
+              "ViewState": "AgIAALYAAAAAAAAAAAAwwMMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-09T07:06:37.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "management.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Views\\Home\\management.cshtml",
+              "RelativeDocumentMoniker": "MVC\u5927\u5C08\\Views\\Home\\management.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Views\\Home\\management.cshtml",
+              "RelativeToolTip": "MVC\u5927\u5C08\\Views\\Home\\management.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-09T07:05:33.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MVC\u5927\u5C08\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\MVC\u5927\u5C08\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MVC\u5927\u5C08\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:03:49.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HistoryCommissionController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\HistoryCommissionController.cs",
+              "RelativeDocumentMoniker": "API\u5927\u5C08\\Controllers\\HistoryCommissionController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\HistoryCommissionController.cs",
+              "RelativeToolTip": "API\u5927\u5C08\\Controllers\\HistoryCommissionController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwFIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T06:50:29.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompletedCommission.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\CompletedCommission.cs",
+              "RelativeDocumentMoniker": "API\u5927\u5C08\\Controllers\\CompletedCommission.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\CompletedCommission.cs",
+              "RelativeToolTip": "API\u5927\u5C08\\Controllers\\CompletedCommission.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAIA0wDAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T07:45:24.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CommissionService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\service\\CommissionService.cs",
+              "RelativeDocumentMoniker": "API\u5927\u5C08\\service\\CommissionService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\service\\CommissionService.cs",
+              "RelativeToolTip": "API\u5927\u5C08\\service\\CommissionService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAJEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T01:43:51.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateCommissionController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\CreateCommissionController.cs",
+              "RelativeDocumentMoniker": "API\u5927\u5C08\\Controllers\\CreateCommissionController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\CreateCommissionController.cs",
+              "RelativeToolTip": "API\u5927\u5C08\\Controllers\\CreateCommissionController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAGEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T08:19:06.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CommissionController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\CommissionController.cs",
+              "RelativeDocumentMoniker": "API\u5927\u5C08\\Controllers\\CommissionController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Project\\API\u5927\u5C08\\Controllers\\CommissionController.cs",
+              "RelativeToolTip": "API\u5927\u5C08\\Controllers\\CommissionController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T08:17:07.949Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

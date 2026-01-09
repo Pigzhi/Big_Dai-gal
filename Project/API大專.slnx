@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="API大專/API大專.csproj" />
+  <Project Path="MVC大專/MVC大專.csproj" Id="4abc1d04-f269-42fc-8545-a7a7902d1fd3" />
+</Solution>

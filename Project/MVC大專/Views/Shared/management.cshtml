@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant"
+      class="light-style layout-menu-fixed"
+      dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="/assets/"
+      data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - 代買代購網站</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="/assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/assets/vendor/css/core.css" />
+    <link rel="stylesheet" href="/assets/vendor/css/theme-default.css" />
+    <link rel="stylesheet" href="/assets/css/demo.css" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Helpers -->
+    <script src="/assets/vendor/js/helpers.js"></script>
+    <script src="/assets/js/config.js"></script>
+</head>
+
+<body>
+
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            <!-- ================= 左側選單 ================= -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+
+                <div class="app-brand demo">
+                    <a asp-controller="Home" asp-action="Index" class="app-brand-link">
+                        <span class="app-brand-text demo menu-text fw-bolder ms-2">
+                            代購賣場
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="menu-inner py-1">
+
+                    <!-- 首頁 -->
+                    <li class="menu-item active">
+                        <a asp-controller="Home" asp-action="management" class="menu-link">
+                            <i class="menu-icon bx bx-home-circle"></i>
+                            <div>首頁</div>
+                        </a>
+                    </li>
+
+                    <!-- ================= 帳號 ================= -->
+                  
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon bx bx-user"></i>
+                            <div>帳號管理</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a asp-controller="Home" asp-action="Userid" class="menu-link">
+                                    <div>帳號資料</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-controller="Home" asp-action="Mywallet" class="menu-link">
+                                    <div>我的錢包</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- ================= 賣場 ================= -->
+               
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon bx bx-store"></i>
+                            <div>賣場管理</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="/Store/CreateStore" class="menu-link">
+                                    <div>建立賣場</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/Store/InStore" class="menu-link">
+                                    <div>賣場列表</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- ================= 委託 ================= -->
+               
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon bx bx-detail"></i>
+                            <div>訂單管理</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a asp-controller="Order" asp-action="Index" class="menu-link">
+                                    <div>管理訂單</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a asp-controller="Order" asp-action="Edit" class="menu-link">
+                                    <div>編輯訂單</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- ================= 系統 ================= -->
+                    <!-- ================= 審核 ================= -->
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon bx bx-check-shield"></i>
+                            <div>審核管理</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="/Reviewer/Review" class="menu-link">
+                                    <div>待審核賣場</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- ================= 紀錄 ================= -->
+                    <!-- ================= 委託歷史 ================= -->
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon bx bx-check-shield"></i>
+                            <div>紀錄</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a asp-controller="Home" asp-action="History" class="menu-link">
+                                    <div>委託紀錄查詢</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a asp-controller="Account" asp-action="Logout" class="menu-link">
+                            <i class="menu-icon bx bx-log-out"></i>
+                            <div>登出</div>
+                        </a>
+                    </li>
+
+                </ul>
+            </aside>
+     
+            <div class="layout-page">
+                <!-- ========== 主內容 ========== -->
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                    @RenderBody()
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="layout-overlay layout-menu-toggle"></div>
+
+    <!-- Core JS -->
+    <script src="/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="/assets/vendor/libs/popper/popper.js"></script>
+    <script src="/assets/vendor/js/bootstrap.js"></script>
+    <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/assets/vendor/js/menu.js"></script>
+
+    <!-- Main JS -->
+    <script src="/assets/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

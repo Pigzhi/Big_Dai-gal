@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewData["Title"] = "歷史紀錄查詢";
+    Layout = "~/Views/Shared/management.cshtml";
+}
+
+<link href="~/css/history.css" rel="stylesheet" />
+
+<h2 class="page-title">⭐⭐⭐委託歷史紀錄查詢⭐⭐⭐</h2>
+
+<div class="search-wrapper">
+    <div class="search-area">
+        <div class="search-row">
+            <label>紀錄編號</label>
+            <input type="text" disabled placeholder="系統產生" />
+        </div>
+
+        <div class="search-row">
+            <label>委託編號</label>
+            <input type="number" id="commissionId" placeholder="輸入委託編號" />
+        </div>
+
+        <div class="btn-area">
+            <button id="btnSearch">查詢</button>
+            <button id="btnClear">清除</button>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="table-wrapper">
+    <table class="result-table">
+        <colgroup>
+            <col style="width: 80px">
+            <col style="width: 80px">
+            <col style="width: 90px">
+            <col style="width: 90px">
+            <col style="width: 160px">
+            <col style="width: auto">
+            <col style="width: auto">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>歷史編號</th>
+                <th>委託編號</th>
+                <th>操作行為</th>
+                <th>變更者</th>
+                <th>變更時間</th>
+                <th>舊資料</th>
+                <th>新資料</th>
+            </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(function () {
+
+            $("#btnSearch").click(function () {
+
+                let commissionId = $("#commissionId").val();
+                let url = "http://localhost:5221/api/management/History";
+
+                if (commissionId) {
+                    url += "/" + commissionId;
+                }
+
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function (res) {
+
+                        if (!res.success) {
+                            alert(res.message);
+                            return;
+                        }
+
+                        let rows = "";
+
+                        $.each(res.data, function (i, item) {
+                            rows += `
+                                <tr>
+                                    <td>${item.historyid}</td>
+                                    <td>${item.commissionid}</td>
+                                    <td>${item.action}</td>
+                                    <td>${item.changedby ?? ""}</td>
+                                    <td>${formatDate(item.changedAt)}</td>
+                                    <td class="json-cell">${formatJsonToLines(item.oldData)}</td>
+                                    <td class="json-cell">${formatJsonToLines(item.newData)}</td>
+                                </tr>
+                            `;
+                        });
+
+                        $("#historyBody").html(rows);
+                    },
+                    error: function () {
+                        alert("查詢失敗，請確認 API 是否啟動");
+                    }
+                });
+            });
+
+            $("#btnClear").click(function () {
+                $("#commissionId").val("");
+                $("#historyBody").empty();
+            });
+
+            function formatDate(dateStr) {
+                let d = new Date(dateStr);
+                return d.toLocaleString();
+            }
+        });
+
+                    function formatJsonToLines(jsonStr) {
+            if (!jsonStr) return "";
+
+            try {
+                const obj = JSON.parse(jsonStr);
+                return JSON.stringify(obj, null, 2); // ⭐ 關鍵
+            } catch (e) {
+                return jsonStr;
+            }
+        
+        }
+    </script>
+}
+
+

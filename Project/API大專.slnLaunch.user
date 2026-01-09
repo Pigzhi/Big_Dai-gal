@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "API+MVC",
+    "Projects": [
+      {
+        "Path": "API大專\\API大專.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "MVC大專\\MVC大專.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]
